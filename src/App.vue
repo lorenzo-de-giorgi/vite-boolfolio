@@ -2,7 +2,7 @@
   <div>
     <h1>ciao</h1>
     <ul>
-      <li v-for="post in posts" :key="projects.id">{{ projects.title }}</li>
+      <li v-for="project in projects" :key="projects.id">{{ project.title }}</li>
     </ul>
   </div>
 </template>
