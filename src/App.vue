@@ -1,37 +1,34 @@
 <template>
-  <div>
-    <h1>ciao</h1>
-    <ul>
-      <li v-for="project in projects" :key="projects.id">{{ project.title }}</li>
-    </ul>
-  </div>
+
+  <HeaderComponent />
+  <main class="container my-4">
+    <router-view></router-view>
+  </main>
+
 </template>
 
+
+
 <script>
-import axios from 'axios';
+import HeaderComponent from './components/HeaderComponent.vue';
 import { store } from './store';
-  export default {
-    name: 'App',
-    data() {
-      return {
-        store,
-        projects: []
-      }
-    },
-    methods: {
-      getAllProjects() {
-        axios.get(this.store.apiBaseURL+'/projects').then((res)=>{
-          console.log(res.data);
-          this.projects = res.data.results;
-        });
-      }
-    },
-    mounted(){
-      this.getAllProjects();
+import axios from 'axios';
+export default {
+  name: 'App',
+  components: {
+    HeaderComponent
+  },
+  data() {
+    return {
+      store
     }
+  },
+  methods: {
+
+  },
+  mounted() {
   }
+}
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
