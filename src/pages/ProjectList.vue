@@ -1,5 +1,12 @@
 <template>
-    <h1>All Projects</h1>
+    <div class="d-flex justify-content-between align-items-center">
+        <h1>All Projects</h1>
+        <select name="categories" id="categories">
+            <option value="">Tutte le categorie</option>
+                <option value="category.id" v-for="category in store.categories" :key="category.id">{{ category.name }}
+            </option>
+        </select>
+    </div>
     <div class="row">
         <div class="col-12 col-lg-6" v-for="project in projects" :key="project.id">
             <CardComponent :item="project" />

@@ -24,9 +24,15 @@ export default {
     }
   },
   methods: {
-
+    getCategories(){
+      axios.get(this.store.apiBaseUrl + '/categories').then((res)=> {
+        console.log(res.data);
+        this.store.categories = res.data.results;
+      });
+    }
   },
   mounted() {
+    this.getCategories();
   }
 }
 </script>
