@@ -46,6 +46,10 @@ export default {
                     label: 'Projects',
                     routeName: 'projects'
                 },
+                {
+                    label: 'Contact',
+                    routeName: 'contact'
+                }
                 // {
                 //   label: 'Categorie',
                 //   routeName: 'categories'
