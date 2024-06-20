@@ -28,8 +28,6 @@ export default {
                 console.log(res.data.results);
                 this.project = res.data.results;
             }).catch((error) => {
-                // console.log(error);
-                // console.log(error.response.data);
                 this.$router.push({ name: 'not-found' });
             }).finally();
         }
