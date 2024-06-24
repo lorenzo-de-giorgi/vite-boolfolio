@@ -11,8 +11,10 @@
                     <p class="card-text"><small class="text-body-secondary">Last updated: 3 {{ item.updated_at
                             }}</small>
                     </p>
-                    <span class="badge rounded-pill text-bg-warning me-3">{{ item.category?.name }}</span>
-                    <RouterLink :to="{ name: 'single-project', params: { 'slug': item.slug } }" class="btn btn-success">Leggi articolo</RouterLink>
+                    <span class="badge rounded-pill text-bg-primary me-3">{{ item.category?.name }}</span>
+                    <div class="d-flex justify-content-end">
+                        <RouterLink :to="{ name: 'single-project', params: { 'slug': item.slug } }" class="btn btn-success">Leggi articolo</RouterLink>
+                    </div>
                 </div>
             </div>
         </div>
