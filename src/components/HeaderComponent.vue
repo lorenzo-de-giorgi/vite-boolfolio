@@ -4,7 +4,7 @@
             <div class="container-fluid d-flex">
                 <div>
                     <router-link to="/" class="navbar-brand">
-                        LDG
+                        Portfolio
                     </router-link>
                 </div>
                 <div>

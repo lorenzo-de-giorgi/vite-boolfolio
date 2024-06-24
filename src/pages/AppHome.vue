@@ -2,17 +2,30 @@
     <div class="d-flex justify-content-center align-items-center">
         <h1 class="typing-demo">Lorenzo De Giorgi</h1>
     </div>
+    <div class="mt-5">
+        <ProjectList />
+    </div>
+    
 </template>
 
 <script>
+import ProjectList from './ProjectList.vue';
     export default {
-        name: "AppHome"
+        name: "AppHome",
+        components: {
+            ProjectList
+        },
+        data() {
+            return {
+                
+            }
+        },
     }
 </script>
 
 <style lang="scss" scoped>
 .typing-demo {
-  width: 17ch;
+  width: 18ch;
   animation: typing 2s steps(13), blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;

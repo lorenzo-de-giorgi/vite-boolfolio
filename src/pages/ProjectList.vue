@@ -1,6 +1,6 @@
 <template>
     <div class="d-flex justify-content-between align-items-center">
-        <h1>All Projects</h1>
+        <h1>I miei Progetti</h1>
         <select name="categories" id="categories">
             <option value="">Tutte le categorie</option>
                 <option value="category.id" v-for="category in store.categories" :key="category.id">{{ category.name }}
